@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Google Map</title>
+</head>
+<body>
+    <h1> My Google Map</h1>
+    <div id="map"></div>
+    <div id="location-request-form">
+        <h2> Share your location with me!</h2>
+        <form action="/process-form" method="POST">
+            <ul>
+                <li>
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="user_name"><br>
+                </li>
+                <li>
+                    <label for="latitude">Latitude:</label><br>
+                    <input type="text" id="latitude" name="user_latitude"><br>
+                </li>
+                <li>
+                    <label for="longitude">Longitude:</label><br>
+                    <input type="text" id="longitude" name="user_longitude"><br>
+                </li>
+                <li>
+                    <input type="submit" value="Submit" id="submit-button">
+                </li>
+            </ul>
+        </form>
+    </div>
+
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=INSERTAPIKEYHERE&callback=initMap&v=weekly"
+    defer 
+    ></script>
+    <script src="app.js">
+    </script>
+</body>
+</html>
